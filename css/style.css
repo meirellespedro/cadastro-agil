@@ -1,0 +1,131 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(../imagens/desktop.png); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+#container{
+    width: 400px;
+    height: 300px;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 0 auto;
+    text-align: center;
+    padding: 40px 0;
+ 
+}
+#container img{
+    width: 120px;
+    height: 120px;
+    margin-top: -60px;
+    margin-bottom: 30px;
+}
+input{
+    height: 40px;
+    width: 80%;
+    font-size: 18px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    padding-left: 40px;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: 10px;
+}
+input#email{
+    background-image: url(../imagens/icone-usuario.png);
+     border-radius: 10px;
+}
+input#senha{
+    background-image: url(../imagens/icone-cadeado.png);
+    border-radius: 10px;
+}
+input#logar{
+    color: #fff;
+    background-color: #f79300;
+    border: 2px solid #db7d00;
+    padding: 5px 20px;
+    height: 45px;
+    width: 90%;
+    background: linear-gradient(to bottom, #faa600, #f68a00);
+    background: -moz-linear-gradient(to bottom, #faa600, #f68a00);
+    background: linear-gradient(to bottom, #faa600, #f68a00);
+    background: -webkit-linear-gradient()(to bottom, #faa600, #f68a00);
+    background: -o-linear-gradient(to bottom, #faa600, #f68a00);
+}
+#password-wrapper {
+    position: relative;
+    /* Isso garante que a div tenha o mesmo tamanho do input */
+    display: inline-block; 
+    width: 100%;
+    max-width: 365px; /* Ajuste este valor para a largura exata do seu campo branco */
+    margin-bottom: 15px; /* Espaço para o botão de baixo */
+}
+
+#senha {
+    width: 100%;
+    padding: 10px; /* Ajuste o respiro interno */
+    padding-left: 40px; /* <--- ISSO move o placeholder/texto para a direita */
+    padding-right: 40px; /* Abre espaço para o olho não atropelar o texto */
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Se quiser as bordas arredondadas como na imagem */
+    box-sizing: border-box;
+}
+
+#toggleEye {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-70%); /* Truque para centralizar verticalmente */
+    cursor: pointer;
+    font-size: 1.2rem;
+    z-index: 10;
+}
+input#logar:hover{
+    background-color: #fff;
+    color:black;
+    transform: scale(1.1);
+    transition: .3s;
+}
+@media(max-width:768px){
+    body {
+        background-image: url(../imagens/mobile.png);
+        background-size: cover; /* Melhor que 100% para não distorcer */
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    #container {
+        width: 90%;
+        margin: 120px auto 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centraliza os elementos filhos */
+    }
+
+    /* Estiliza as caixas que envolvem os inputs */
+    #password-wrapper{
+        width: 85%; /* Define a largura real na tela */
+        position: relative;
+        margin-bottom: 15px;
+    }
+
+    /* Faz os inputs preencherem todo o espaço da caixa deles */
+    input[type="text"], 
+    input[type="password"] {
+        width: 85%; 
+        padding: 12px 40px; /* 12px cima/baixo, 40px laterais para os ícones */
+        box-sizing: border-box; /* Impede que o padding aumente a largura total */
+    }
+    input#logar {
+        width: 85%;
+        padding: 10px;
+    }
+}
