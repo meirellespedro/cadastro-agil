@@ -1,4 +1,4 @@
-# Cadastro-gil
+# Cadastro Ágil
 
 Sistema simples de **cadastro e login de usuários** feito em PHP + MySQL, com foco em
 aplicar boas práticas de segurança no armazenamento de credenciais. Projeto de estudo
@@ -62,7 +62,7 @@ $stmt->bind_param("ss", $email, $senha_hash);
    ```
 
 3. Ajuste as credenciais em `conexao.php` para o seu ambiente.
-4. Coloque a pasta no diretório do servidor (ex.: `htdocs/`) e acesse `http://localhost/Cadastro-gil`.
+4. Coloque a pasta no diretório do servidor (ex.: `htdocs/`) e acesse `http://localhost/cadastro-agil`.
 
 > **Nota:** as credenciais em `conexao.php` são de ambiente local de estudo.
 > Em produção, esses valores devem ficar em variáveis de ambiente, fora do código versionado.
